@@ -64,7 +64,7 @@ app.post('/', function (req, res) {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
     ...(req.body.deadline ? { deadline: req.body.deadline } : {}),
-    attending: false,
+    attending: req.body.attending,
   };
 
   guestList.push(guest);
